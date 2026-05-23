@@ -8,7 +8,7 @@ const { autorizarPermisos } = require("../../middlewares/permiso.middleware");
 router.get(
   "/:idReserva",
   verificarToken,
-  autorizarPermisos("Administrador", "Auxiliar"),
+  autorizarPermisos("Administrador", "Auxiliar", "Docente"),
   historialReservasController.listarHistorialPorReserva
 );
 
